@@ -1,0 +1,8 @@
+{
+  "name": "test-grunt",
+  "version": "0.3.1",
+  "devDependencies": {
+    "sass-bootstrap": "~3.0.2"
+  },
+  "dependencies": {}
+}

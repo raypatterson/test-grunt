@@ -1,0 +1,1 @@
+var test_grunt_js = true;
