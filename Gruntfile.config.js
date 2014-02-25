@@ -19,15 +19,22 @@ module.exports = {
 
     html: ['src/index.html'],
 
-    assets_src: ['./**/fonts/**/*', './**/images/**/*'],
+    assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
+
+    favicons: {
+      src: 'src/project/images/favicons/__FAVICON_SOURCE__.png',
+      dest: 'dist/project/images/favicons',
+      html: 'dist/index.html',
+      path: 'project/images/favicons/',
+    },
 
     tpl: ['src/**/*.tpl.html'],
 
-    js: ['src/**/*.js', '!src/**/*.spec.js'],
+    js: ['src/{,*/}*.js', '!src/{,*/}*.spec.js'],
     jsunit: ['src/**/*.spec.js'],
 
-    coffee: ['src/**/*.coffee', '!src/**/*.spec.coffee'],
-    coffeeunit: ['src/**/*.spec.coffee'],
+    coffee: ['src/{,*/}*.coffee', '!src/{,*/}*.spec.coffee'],
+    coffeeunit: ['src/{,*/}*.spec.coffee'],
 
     sass: {
       specify_src: 'main',
@@ -36,9 +43,7 @@ module.exports = {
       fonts_dir: '',
       images_dir: '',
       import_path: ['src', 'bower_components'],
-    },
-
-    less: 'src/less/main.less'
+    }
   },
 
   /**

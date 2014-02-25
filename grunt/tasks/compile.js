@@ -15,7 +15,9 @@ module.exports = function(grunt) {
     'imagemin',
     'rev',
     'usemin',
-    'htmlmin'
+    'favicons'
+
+    // 'htmlmin'
   ]);
 
 };
