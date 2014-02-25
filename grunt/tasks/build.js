@@ -7,8 +7,8 @@ module.exports = function(grunt) {
    */
   grunt.registerTask('build', [
     'clean', 'jshint', 'coffeelint', 'coffee',
-    'compass:build', 'concat:build_css', 'autoprefixer',
     'browserify:build',
+    'compass:build', 'concat:build_css', 'autoprefixer',
     'copy:build_app_assets',
     'index:build'
   // ,
