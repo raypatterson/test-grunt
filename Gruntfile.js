@@ -1,6 +1,6 @@
 module.exports = function(grunt) {
 
-  /** 
+  /**
    * Load required Grunt tasks. These are installed based on the versions listed
    * in `package.json` when you do `npm install` in this directory.
    */
@@ -29,7 +29,7 @@ module.exports = function(grunt) {
   /**
    * Load in our build configuration file.
    */
-  grunt.util._.extend(taskConfig, require(__dirname + '/build.config.js'));
+  grunt.util._.extend(taskConfig, require(__dirname + '/Gruntfile.config.js'));
 
   /**
    * Initialize task config options.

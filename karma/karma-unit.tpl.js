@@ -9,8 +9,8 @@ module.exports = function(karma) {
      * This is the list of file patterns to load into the browser during testing.
      */
     files: [
-      'src/**/*.js',
-      'src/**/*.coffee'
+      'source/**/*.js',
+      'source/**/*.coffee'
     ],
 
     frameworks: ['jasmine'],

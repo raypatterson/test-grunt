@@ -8,7 +8,6 @@ module.exports = {
    */
   build_css: {
     src: [
-          // '<%= vendor_files.css %>'
           '<%= compass.output %>'
         ],
     dest: '<%= compass.dest %>'
@@ -21,13 +20,7 @@ module.exports = {
     options: {
       banner: '<%= meta.banner %>'
     },
-    src: [
-          '<%= vendor_files.js %>',
-          'module.prefix',
-          '<%= build_dir %>/src/**/*.js',
-          '<%= html2js.app.dest %>',
-          'module.suffix'
-        ],
-    dest: '<%= compile_dir %>/assets/<%= pkg.name %>-<%= pkg.version %>.js'
+    src: ['<%= build_dir %>/**/*.js'],
+    dest: '<%= build_dir %>/main.js'
   }
 };

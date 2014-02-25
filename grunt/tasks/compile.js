@@ -9,11 +9,13 @@ module.exports = function(grunt) {
   grunt.registerTask('compile', [
     'compass:compile',
     'copy:compile_assets',
-    'ngmin',
-    'concat:compile_js',
+    'useminPrepare',
     'uglify',
     'index:compile',
-    'imagemin'
+    'imagemin',
+    'rev',
+    'usemin',
+    'htmlmin'
   ]);
 
 };
