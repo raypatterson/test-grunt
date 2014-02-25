@@ -8,33 +8,37 @@ module.exports = {
    * completely built.
    */
   source_dir: 'src',
-  build_dir: 'build',
-  compile_dir: 'bin',
+  build_dir: '.tmp',
+  compile_dir: 'dist',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
-   * stuff in `src/`). These file paths are used in the configuration of
-   * build tasks. `js` is all project javascript, less tests. `ctpl` contains
-   * our reusable components' (`src/common`) template HTML files, while
-   * `atpl` contains the same, but for our app's code. `html` is just our
-   * main HTML file, `less` is our main stylesheet, and `unit` contains our
-   * app's unit tests.
+   * stuff in `src/`).
    */
   app_files: {
-    js: ['src/**/*.js', '!src/**/*.spec.js', '!src/assets/**/*.js'],
+
+    html: ['src/index.html'],
+
+    assets_src: ['./**/fonts/**/*', './**/images/**/*'],
+
+    tpl: ['src/**/*.tpl.html'],
+
+    js: ['src/**/*.js', '!src/**/*.spec.js'],
     jsunit: ['src/**/*.spec.js'],
 
     coffee: ['src/**/*.coffee', '!src/**/*.spec.coffee'],
     coffeeunit: ['src/**/*.spec.coffee'],
 
-    tpl: ['src/**/*.tpl.html'],
-
-    html: ['src/index.html'],
-    less: 'src/less/main.less',
     sass: {
-      specify: 'src/sass/main',
-      import_path: ['src', 'bower_components']
-    }
+      specify_src: 'main',
+      specify_dist: 'main',
+      css_dir: '.tmp',
+      fonts_dir: '',
+      images_dir: '',
+      import_path: ['src', 'bower_components'],
+    },
+
+    less: 'src/less/main.less'
   },
 
   /**
@@ -53,7 +57,7 @@ module.exports = {
    * appropriately in `vendor_files.js`.
    *
    * The `vendor_files.js` property holds files to be automatically
-   * concatenated and minified with our project source files.
+   * concatenated and minified with our project src files.
    *
    * The `vendor_files.css` property holds any CSS files to be automatically
    * included in our app.

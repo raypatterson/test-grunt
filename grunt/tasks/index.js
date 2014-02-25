@@ -2,7 +2,7 @@ module.exports = function(grunt) {
 
   console.log('Loaded : index.js');
 
-  /** 
+  /**
    * The index.html template includes the stylesheet and javascript sources
    * based on dynamic names calculated in this Gruntfile. This task assembles
    * the list into variables for the template to use and then runs the
@@ -17,7 +17,7 @@ module.exports = function(grunt) {
       return file.replace(dirRE, '');
     });
 
-    grunt.file.copy('src/index.html', this.data.dir + '/index.html', {
+    grunt.file.copy(grunt.config('source_dir') + '/index.html', this.data.dir + '/index.html', {
       process: function(contents, path) {
         return grunt.template.process(contents, {
           data: {

@@ -8,10 +8,11 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean', 'jshint', 'coffeelint', 'coffee',
     'compass:build', 'concat:build_css', 'autoprefixer',
-    'copy:build_app_assets', 'copy:build_vendor_assets',
-    'copy:build_appjs', 'copy:build_vendorjs',
-    'index:build',
-    'karmaconfig', 'karma:continuous'
+    'browserify:build',
+    'copy:build_app_assets',
+    'index:build'
+  // ,
+  // 'karmaconfig', 'karma:continuous'
   ]);
 
 };

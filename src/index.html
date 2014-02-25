@@ -2,29 +2,11 @@
 <html>
   <head>
     <title>Test Grunt</title>
-
-    <!-- font awesome from BootstrapCDN -->
-    <link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
-
-    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
-    <link rel="stylesheet" type="text/css" href="<%= file %>" /><% }); %>
-
-    <!--[if IE 7>
-    <link rel="stylesheet" href="assets/font-awesome-ie7.min.css />
-    <![endif]-->
-
-    <!-- compiled CSS --><% scripts.forEach( function ( file ) { %>
-    <script type="text/javascript" src="<%= file %>"></script><% }); %>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="main.js"></script>
   </head>
   <body>
-    <div class="container-offset">
-      <div class="container">
-        <div class="row">
-          <div class="test-container col-md-12">
-            <div class="test-pattern"></div>
-          </div>
-        </div>
-      </div>
+    <div class="test-container">
     </div>
   </body>
 </html>
