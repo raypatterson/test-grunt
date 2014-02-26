@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   /**
    * Run a server with livereload
    */
-  grunt.registerTask('server', ['build', 'karma:unit', 'connect:livereload', 'delta']);
+  grunt.registerTask('server', ['build', 'connect:livereload', 'delta']);
+  // grunt.registerTask('server', ['build', 'karma:unit', 'connect:livereload', 'delta']);
 
 };

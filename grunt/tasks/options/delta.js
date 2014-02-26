@@ -39,7 +39,8 @@ module.exports = {
     files: [
           '<%= app_files.js %>'
         ],
-    tasks: ['jshint:src', 'karma:unit:run', 'copy:build_appjs']
+    tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build']
+    // tasks: ['jshint:src', 'karma:unit:run', 'copy:build_appjs']
   },
 
   /**
@@ -50,7 +51,8 @@ module.exports = {
     files: [
           '<%= app_files.coffee %>'
         ],
-    tasks: ['coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs']
+    tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build']
+    // tasks: ['coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs']
   },
 
   /**
@@ -58,9 +60,7 @@ module.exports = {
    * files, so this is probably not very useful.
    */
   assets: {
-    files: [
-          'src/assets/**/*'
-        ],
+    files: '<%= app_files.assets_src %>',
     tasks: ['copy:build_assets']
   },
 
@@ -98,7 +98,8 @@ module.exports = {
     files: [
           '<%= app_files.jsunit %>'
         ],
-    tasks: ['jshint:test', 'karma:unit:run'],
+    tasks: ['jshint:test'],
+    // tasks: ['jshint:test', 'karma:unit:run'],
     options: {
       livereload: false
     }
@@ -112,7 +113,8 @@ module.exports = {
     files: [
           '<%= app_files.coffeeunit %>'
         ],
-    tasks: ['coffeelint:test', 'karma:unit:run'],
+    tasks: ['coffeelint:test'],
+    // tasks: ['coffeelint:test', 'karma:unit:run'],
     options: {
       livereload: false
     }

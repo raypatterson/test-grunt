@@ -30,6 +30,8 @@ module.exports = {
 
     tpl: ['src/**/*.tpl.html'],
 
+    bower: '.tmp/bower.js',
+
     js: ['src/{,*/}*.js', '!src/{,*/}*.spec.js'],
     jsunit: ['src/**/*.spec.js'],
 
@@ -73,9 +75,7 @@ module.exports = {
    */
   vendor_files: {
     js: [],
-    css: [
-    ],
-    assets: [
-    ]
+    css: [],
+    assets: []
   },
 };

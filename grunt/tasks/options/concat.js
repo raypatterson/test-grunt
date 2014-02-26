@@ -20,7 +20,7 @@ module.exports = {
     options: {
       banner: '<%= meta.banner %>'
     },
-    src: ['<%= build_dir %>/**/*.js'],
-    dest: '<%= build_dir %>/main.js'
+    src: ['<%= build_dir %>/{,*/}*.js'],
+    dest: '<%= compile_dir %>/main.js'
   }
 };

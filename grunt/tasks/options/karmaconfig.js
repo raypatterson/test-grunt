@@ -7,7 +7,6 @@ module.exports = {
     dir: '<%= build_dir %>',
     src: [
       '<%= vendor_files.js %>',
-      '<%= html2js.app.dest %>',
       '<%= test_files.js %>'
     ]
   }
