@@ -43,3 +43,15 @@ html, body {
   font-weight: 400;
   src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
 }
+
+/**
+ * Modernizr
+ */
+
+.cssanimations {
+  background: green;
+}
+
+.no-cssanimations {
+  background: red;
+}

@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     'browserify:build',
     'compass:build', 'concat:build_css', 'autoprefixer',
     'copy:build_app_assets',
+    'modernizr',
     'index:build'
     // , 'karmaconfig', 'karma:continuous'
   ]);

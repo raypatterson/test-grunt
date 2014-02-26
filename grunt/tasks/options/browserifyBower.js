@@ -5,7 +5,10 @@ module.exports = {
   build: {
     options: {
       file: '<%= app_files.bower %>',
-      forceResolve: {},
+      forceResolve: {
+        'modernizr': 'null',
+        'sass-bootstrap': 'null'
+      },
       shim: {}
     }
   }
