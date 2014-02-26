@@ -10,14 +10,14 @@ module.exports = function(grunt) {
     'compass:compile',
     'copy:compile_assets',
     'useminPrepare',
+    'concat:compile_js',
     'uglify',
     'index:compile',
     'imagemin',
     'rev',
     'usemin',
-    'favicons'
-
-    // 'htmlmin'
+    'favicons',
+    'htmlmin'
   ]);
 
 };
