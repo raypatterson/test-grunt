@@ -39,7 +39,7 @@ module.exports = {
     files: [
           '<%= app_files.js %>'
         ],
-    tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build']
+    tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['jshint:src', 'karma:unit:run', 'copy:build_appjs']
   },
 
@@ -51,7 +51,7 @@ module.exports = {
     files: [
           '<%= app_files.coffee %>'
         ],
-    tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build']
+    tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs']
   },
 
@@ -87,7 +87,7 @@ module.exports = {
    */
   sass: {
     files: ['src/**/*.scss'],
-    tasks: ['compass:build', 'autoprefixer']
+    tasks: ['compass:build', 'autoprefixer', 'modernizr']
   },
 
   /**

@@ -2,13 +2,10 @@
   "name": "test-grunt",
   "version": "0.3.1",
   "devDependencies": {
+    "modernizr": "~2.7.1",
     "jquery": "~2.1.0",
     "lodash": "~2.4.1",
     "sass-bootstrap": "~3.0.2"
   },
-  "dependencies": {
-    "jquery": "~2.1.0",
-    "lodash": "~2.4.1",
-    "sass-bootstrap": "~3.0.2"
-  }
+  "dependencies": {}
 }

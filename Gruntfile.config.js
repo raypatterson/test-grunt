@@ -28,7 +28,7 @@ module.exports = {
       path: 'project/images/favicons/',
     },
 
-    tpl: ['src/**/*.tpl.html'],
+    tpl: ['src/{,*/}*.tpl.html'],
 
     bower: '.tmp/bower.js',
 

@@ -41,6 +41,7 @@
     "grunt-rev": "~0.1.0",
     "grunt-usemin": "~2.0.2",
     "grunt-favicons": "~0.6.0",
-    "grunt-browserify-bower": "~0.1.4"
+    "grunt-browserify-bower": "~0.1.4",
+    "grunt-modernizr": "~0.5.1"
   }
 }
