@@ -6,7 +6,9 @@ module.exports = function(grunt) {
    * The `build` task gets your app ready to run for development and testing.
    */
   grunt.registerTask('build', [
-    'clean', 'jshint', 'coffeelint', 'coffee',
+    'clean', 
+    'swig:dev', 
+    'jshint', 'coffeelint', 'coffee',
     'browserifyBower:build',
     'browserify:build',
     'compass:build', 'concat:build_css', 'autoprefixer',

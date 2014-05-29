@@ -1,0 +1,9 @@
+<div class="module module-a {{ classes }}">
+  <h2>Module A</h2>
+  <div class="items">
+  {% for item in items %}
+    {% set file = '../../../partials/' + item.partial + '/partial.html' %}
+    {% include file with item only %}
+  {% endfor %}
+  </div>
+</div>

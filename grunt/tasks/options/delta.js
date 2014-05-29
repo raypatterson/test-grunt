@@ -73,6 +73,14 @@ module.exports = {
   },
 
   /**
+   * When index.html changes, we need to compile it.
+   */
+  swig: {
+    files: ['<%= app_files.swig.watch %>'],
+    tasks: ['swig:dev']
+  },
+
+  /**
    * When our templates change, we only rewrite the template cache.
    */
   tpls: {

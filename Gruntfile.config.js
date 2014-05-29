@@ -7,6 +7,7 @@ module.exports = {
    * development and the `compile_dir` folder is where our app resides once it's
    * completely built.
    */
+  root_dir: __dirname,
   source_dir: 'src',
   build_dir: '.tmp',
   compile_dir: 'dist',
@@ -20,6 +21,11 @@ module.exports = {
     html: ['src/index.html'],
 
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
+
+    swig: {
+      src: __dirname + '/src/project/templates/swig',
+      watch: ['src/{,*/}*.swig', '!src/vendor/{,*/}*.*']
+    },
 
     favicons: {
       src: 'src/project/images/favicons/__FAVICON_SOURCE__.png',
