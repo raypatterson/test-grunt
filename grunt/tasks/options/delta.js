@@ -73,6 +73,14 @@ module.exports = {
   },
 
   /**
+   * When Swig files change, we need to compile them.
+   */
+  swig: {
+    files: ['<%= app_files.swig.watch %>'],
+    tasks: ['swig:dev']
+  },
+
+  /**
    * When our templates change, we only rewrite the template cache.
    */
   tpls: {
