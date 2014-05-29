@@ -1,3 +1,3 @@
 ;(function(win) {
-  console.log('Index Script');
+  console.log('Page A Script');
 }(this));

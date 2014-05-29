@@ -73,7 +73,7 @@ module.exports = {
   },
 
   /**
-   * When index.html changes, we need to compile it.
+   * When Swig files change, we need to compile them.
    */
   swig: {
     files: ['<%= app_files.swig.watch %>'],

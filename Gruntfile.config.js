@@ -24,7 +24,7 @@ module.exports = {
 
     swig: {
       src: __dirname + '/src/project/templates/swig',
-      watch: ['src/{,*/}*.swig', '!src/vendor/{,*/}*.*']
+      watch: ['src/{,*/}*.{swig,json}', 'src/**/swig/**/*.html', '!src/vendor/{,*/}*.*']
     },
 
     favicons: {
