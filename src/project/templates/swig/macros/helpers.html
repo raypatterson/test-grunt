@@ -28,7 +28,7 @@
     {% if loop.index0 % 2 == 0 %}
     <div class="group">
     {% endif %}
-    <!-- Insert content here -->
+    {{ get_item(item.partial, item) }}
     {% if loop.index0 % 2 == 1 or loop.index0 == loop.length - 1 %}
     </div>
     {% endif %}
