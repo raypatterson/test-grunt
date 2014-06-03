@@ -1,11 +1,11 @@
 {% extends '../../../layouts/template.html' %}
 
-{% block classes %}page-b{% endblock %}
-
-{% block header %}
-<h1>Page B</h1>
-{% endblock %}
+{% block classes %}template-b{% endblock %}
 
 {% block content %}
-{{ helpers.get_items(items) }}
+<h2>Template B</h2>
+{% endblock %}
+
+{% block items %}
+  {{ helpers.get_items(items) }}
 {% endblock %}

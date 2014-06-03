@@ -1,6 +1,6 @@
-{ 
+{
+	"title": "Home",
 	"items": [{
-		"title": "Home",
 		"partial": "templates/template-a",
 		"items": [{
 				"partial": "modules/module-a",
@@ -50,4 +50,3 @@
 		]
 	}]
 }
-

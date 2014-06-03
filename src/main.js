@@ -10,8 +10,6 @@ $(function() {
   console.log('Document is ready.');
 });
 
-var items = require('./index.json');
-
 var resolver = function(item) {
 
   if (item.partial) {
@@ -29,4 +27,4 @@ var resolver = function(item) {
   }
 };
 
-resolver(items);
+resolver(require('./index.json').items[0]);
