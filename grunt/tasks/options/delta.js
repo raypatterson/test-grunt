@@ -39,7 +39,8 @@ module.exports = {
     files: [
           '<%= app_files.js %>'
         ],
-    tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
+    tasks: ['jshint:src', 'modernizr']
+    // tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['jshint:src', 'karma:unit:run', 'copy:build_appjs']
   },
 
@@ -51,7 +52,8 @@ module.exports = {
     files: [
           '<%= app_files.coffee %>'
         ],
-    tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
+    tasks: ['coffeelint:src', 'modernizr']
+    // tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs']
   },
 
@@ -78,6 +80,14 @@ module.exports = {
   swig: {
     files: ['<%= app_files.swig.watch %>'],
     tasks: ['swig:dev']
+  },
+
+  /**
+   * When Webpack files change, we need to compile them.
+   */
+  webpack: {
+    files: ['<%= app_files.webpack.watch %>'],
+    tasks: ['webpack:dev']
   },
 
   /**

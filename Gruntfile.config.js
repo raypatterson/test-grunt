@@ -23,8 +23,12 @@ module.exports = {
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
 
     swig: {
-      src: __dirname + '/src/project/templates/swig',
+      src: __dirname + '/src/project/swig',
       watch: ['src/{,*/}*.{swig,json}', 'src/**/swig/**/*.html', '!src/vendor/{,*/}*.*']
+    },
+
+    webpack: {
+      watch: ['src/{,*/}*.{js,json}', '!src/vendor/{,*/}*.*']
     },
 
     favicons: {

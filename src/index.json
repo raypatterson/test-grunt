@@ -1,6 +1,6 @@
 {
 	"title": "Home",
-	"partial": "pages/page-a",
+	"partial": "templates/template-a",
 	"items": [{
 			"partial": "modules/module-a",
 			"items": [{
