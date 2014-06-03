@@ -1,6 +1,11 @@
-{% import '../../../macros/helpers.html' as helpers %}
+{% extends '../../../layouts/module.html' %}
 
-<div class="module module-b {{ classes }}">
-  <h2>Module B</h2>
+{% block classes %}module-c{% endblock %}
+
+{% block content %}
+<h2>Module B</h2>
+{% endblock %}
+
+{% block items %}
   {{ helpers.get_items_list_group(items) }}
-</div>
+{% endblock %}
