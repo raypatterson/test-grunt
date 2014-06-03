@@ -1,50 +1,53 @@
-{
-	"title": "Home",
-	"partial": "templates/template-a",
+{ 
 	"items": [{
-			"partial": "modules/module-a",
-			"items": [{
-					"partial": "components/component-a",
-					"classes": "custom-style-foo"
-				}, {
-					"partial": "components/component-b",
-					"classes": "custom-style-bar"
-				}, {
-					"partial": "components/component-c",
-					"classes": "custom-style-baz"
-				}
-			]
-		}, {
-			"partial": "modules/module-b",
-			"items": [{
-					"partial": "components/component-a"
-				}, {
-					"partial": "components/component-b"
-				}, {
-					"partial": "components/component-c"
-				}, {
-					"partial": "components/component-a"
-				}, {
-					"partial": "components/component-b"
-				}, {
-					"partial": "components/component-c"
-				}, {
-					"partial": "components/component-a"
-				}
-			]
-		}, {
-			"partial": "modules/module-c",
-			"items": [{
-					"partial": "components/component-c",
-					"classes": "custom-style-baz"
-				}, {
-					"partial": "components/component-b",
-					"classes": "custom-style-foo"
-				}, {
-					"partial": "components/component-a",
-					"classes": "custom-style-bar"
-				}
-			]
-		}
-	]
+		"title": "Home",
+		"partial": "templates/template-a",
+		"items": [{
+				"partial": "modules/module-a",
+				"items": [{
+						"partial": "components/component-a",
+						"classes": "custom-style-foo"
+					}, {
+						"partial": "components/component-b",
+						"classes": "custom-style-bar"
+					}, {
+						"partial": "components/component-c",
+						"classes": "custom-style-baz"
+					}
+				]
+			}, {
+				"partial": "modules/module-b",
+				"items": [{
+						"partial": "components/component-a"
+					}, {
+						"partial": "components/component-b"
+					}, {
+						"partial": "components/component-c"
+					}, {
+						"partial": "components/component-a"
+					}, {
+						"partial": "components/component-b"
+					}, {
+						"partial": "components/component-c"
+					}, {
+						"partial": "components/component-a"
+					}
+				]
+			}, {
+				"partial": "modules/module-c",
+				"items": [{
+						"partial": "components/component-c",
+						"classes": "custom-style-baz"
+					}, {
+						"partial": "components/component-b",
+						"classes": "custom-style-foo"
+					}, {
+						"partial": "components/component-a",
+						"classes": "custom-style-bar"
+					}
+				]
+			}
+		]
+	}]
 }
+
