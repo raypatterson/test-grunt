@@ -2,17 +2,22 @@
 module.exports = {
   dev: {
     context: './src',
-    entry: './main.js',
+    entry: { 
+      index: './index.js' 
+    },
     resolve: {
       modulesDirectories: ['../node_modules', '../bower_components', './vendor'],
     },
     output: {
       path: '.tmp/',
-      filename: 'main.js',
+      filename: '[name].js',
     },
     module: {
       loaders: [
         { 
+          test: /\.scss$/, 
+          loader: 'style!css!sass?outputStyle=expanded' 
+        }, { 
           test: /\.json$/, 
           loader: 'json' 
         }

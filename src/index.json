@@ -1,4 +1,5 @@
 {
+	"path": "index",
 	"title": "Home",
 	"items": [{
 		"partial": "templates/template-a",
