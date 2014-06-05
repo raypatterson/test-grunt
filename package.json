@@ -46,6 +46,7 @@
     "jquery": "^2.1.1",
     "json-loader": "^0.5.1",
     "load-grunt-tasks": "~0.1.0",
+    "lodash": "^2.4.1",
     "sass-loader": "^0.1.1",
     "style-loader": "^0.6.4",
     "time-grunt": "~0.1.0"

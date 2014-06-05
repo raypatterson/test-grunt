@@ -28,7 +28,10 @@ module.exports = {
     },
 
     webpack: {
-      watch: ['src/{,*/}*.{js,json}', '!src/vendor/{,*/}*.*']
+      watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
+      match: ['./src/*.js', '!./src/*.spec.js'],
+      cwd: './src/',
+      ext: 'js'
     },
 
     favicons: {

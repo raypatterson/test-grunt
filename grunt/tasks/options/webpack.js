@@ -1,15 +1,13 @@
 
 module.exports = {
   dev: {
-    context: './src',
-    entry: { 
-      index: './index.js' 
-    },
+    context: '.',
+    entry: '<%= app_files.webpack.entry %>',
     resolve: {
       modulesDirectories: ['../node_modules', '../bower_components', './vendor'],
     },
     output: {
-      path: '.tmp/',
+      path: '<%= build_dir %>',
       filename: '[name].js',
     },
     module: {

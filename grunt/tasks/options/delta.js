@@ -103,10 +103,10 @@ module.exports = {
   /**
    * When the CSS files change, we need to compile and minify them.
    */
-  sass: {
-    files: ['src/**/*.scss'],
-    tasks: ['compass:build', 'autoprefixer', 'modernizr']
-  },
+  // sass: {
+  //   files: ['src/**/*.scss'],
+  //   tasks: ['compass:build', 'autoprefixer', 'modernizr']
+  // },
 
   /**
    * When a JavaScript unit test file changes, we only want to lint it and

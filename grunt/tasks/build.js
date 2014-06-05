@@ -8,9 +8,11 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean', 
     'swig:dev', 
+    'webpackconfig:dev', 
     'webpack:dev', 
+    // 'compass:build', 
     'jshint', 'coffeelint', 'coffee',
-    'compass:build', 'concat:build_css', 'autoprefixer',
+    'concat:build_css', 'autoprefixer',
     'copy:build_app_assets',
     'modernizr',
     'index:build'
