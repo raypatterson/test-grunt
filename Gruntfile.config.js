@@ -18,7 +18,7 @@ module.exports = {
    */
   app_files: {
 
-    html: ['src/index.html'],
+    html: ['src/*.html'],
 
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
 

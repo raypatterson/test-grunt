@@ -24,11 +24,12 @@ module.exports = {
         }
       }
     },
+    loader: 'foo',
     expand: true,
     dot: true,
     cwd: '<%= source_dir %>',
     src: ['**/*.swig', '!**/vendor/**/*'],
-    dest: '<%= source_dir %>',
+    dest: '<%= build_dir %>',
     generateSitemap: false,
     generateRobotstxt: false
   }

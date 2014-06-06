@@ -14,8 +14,8 @@ module.exports = function(grunt) {
     'jshint', 'coffeelint', 'coffee',
     'concat:build_css', 'autoprefixer',
     'copy:build_app_assets',
-    'modernizr',
-    'index:build'
+    'modernizr'
+    // , 'index:build'
     // , 'karmaconfig', 'karma:continuous'
   ]);
 

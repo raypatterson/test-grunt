@@ -40,6 +40,7 @@
     "grunt-modernizr": "~0.5.1",
     "grunt-ngmin": "0.0.2",
     "grunt-recess": "~0.3.0",
+    "grunt-replace": "^0.7.7",
     "grunt-rev": "~0.1.0",
     "grunt-swig": "^0.2.1",
     "grunt-usemin": "~2.0.2",
@@ -47,6 +48,7 @@
     "json-loader": "^0.5.1",
     "load-grunt-tasks": "~0.1.0",
     "lodash": "^2.4.1",
+    "rekuire": "^0.1.5",
     "sass-loader": "^0.1.1",
     "style-loader": "^0.6.4",
     "time-grunt": "~0.1.0"

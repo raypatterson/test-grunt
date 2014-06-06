@@ -1,3 +1,4 @@
+var CommonsChunkPlugin = rekuire('node_modules/webpack/lib/optimize/CommonsChunkPlugin');
 
 module.exports = {
   dev: {
@@ -9,7 +10,11 @@ module.exports = {
     output: {
       path: '<%= build_dir %>',
       filename: '[name].js',
+      chunkFilename: '[id].chunk.js'
     },
+    plugins: [
+        new CommonsChunkPlugin('commons.js')
+    ],
     module: {
       loaders: [
         { 

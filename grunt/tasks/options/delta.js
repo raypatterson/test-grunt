@@ -69,10 +69,10 @@ module.exports = {
   /**
    * When index.html changes, we need to compile it.
    */
-  html: {
-    files: ['<%= app_files.html %>'],
-    tasks: ['index:build']
-  },
+  // html: {
+  //   files: ['<%= app_files.html %>'],
+  //   tasks: ['index:build']
+  // },
 
   /**
    * When Swig files change, we need to compile them.
@@ -93,12 +93,12 @@ module.exports = {
   /**
    * When our templates change, we only rewrite the template cache.
    */
-  tpls: {
-    files: [
-          '<%= app_files.tpl %>'
-        ],
-    tasks: ['html2js']
-  },
+  // tpls: {
+  //   files: [
+  //         '<%= app_files.tpl %>'
+  //       ],
+  //   tasks: ['html2js']
+  // },
 
   /**
    * When the CSS files change, we need to compile and minify them.

@@ -6,7 +6,7 @@ $ = require('jquery');
 
 $(function() {
 
-  console.log('Document is ready.');
+  console.log('Document is ready.', __dirname, __filename);
 
   var resolver = function(item) {
 
@@ -25,18 +25,6 @@ $(function() {
     }
   };
 
-  var path = '';
-  path = __filename;
-  path = path.substring(0, path.lastIndexOf('.'));
-
-  var styleEntry = '.' + path + '.scss';
-  var dataEntry = '.' + path + '.json';
-
-  console.log('path', path);
-  console.log('styleEntry', styleEntry);
-  console.log('dataEntry', dataEntry);
-
-  require(styleEntry);
-  // require('./index.scss');
-  resolver(require('./index.json').items[0]);
+  require('./page-a.scss');
+  resolver(require('./page-a.json').items[0]);
 });
