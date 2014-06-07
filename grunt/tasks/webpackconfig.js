@@ -11,8 +11,9 @@ module.exports = function(grunt) {
     var entry = {};
 
     grunt.util._.map(arr, function( val , key ) {
-      key = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length, val.lastIndexOf(data.ext) - 1);
-      entry[key] = val; 
+      val = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length);
+      key = val.substring(0, val.lastIndexOf(data.ext) - 1);
+      entry[key] = './' + val; 
     });
 
     grunt.config('app_files.webpack.entry', entry);

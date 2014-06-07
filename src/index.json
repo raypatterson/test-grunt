@@ -1,9 +1,21 @@
 {
 	"path": "index",
 	"title": "Home",
-	"includes": [
-		"index-include.js"
-	],
+	"includes": {
+		"vendor": [
+			"vendor-a/scripts.js",
+			"vendor-c/scripts.js"
+			],
+		"library": [
+			"scripts/library-a.js",
+			"scripts/library-c.js"
+			],
+		"project": [
+			"pages/index/scripts.js",
+			"common/scripts/common-a.js",
+			"common/scripts/common-c.js"
+			]
+	},
 	"items": [{
 		"partial": "templates/template-a",
 		"items": [{

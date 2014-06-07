@@ -29,7 +29,7 @@ module.exports = {
 
     entry: {
       js: {
-        watch: ['./src/project/entry/*.js'],
+        watch: ['./src/_entry/*.js'],
         match: ['./src/*.json'],
         cwd: './src/',
         ext: 'json'
@@ -46,8 +46,8 @@ module.exports = {
 
     webpack: {
       watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
-      match: ['./src/*.js', '!./src/*.{include,spec}.js'],
-      cwd: './src/',
+      match: ['src/*.js', '!src/*.spec.js'],
+      cwd: 'src/',
       ext: 'js'
     },
 

@@ -8,8 +8,6 @@ $(function() {
 
   console.log('Document is ready.');
 
-  require('./index.scss');
-
   var resolver = function(item) {
 
     if (item.partial) {
@@ -22,8 +20,7 @@ $(function() {
           }
         }(item.items));
       }
-
-      require('./project/swig/partials/' + item.partial + '/scripts.js');
+      req('./' + item.partial + '/scripts.js');
     }
   };
 
@@ -34,17 +31,32 @@ $(function() {
       var i = 0;
       var l = items.length;
       for (i; i < l; i++) {
-        require('./project/pages/' + items[i]);
+        console.log('./' + items[i]);
+        req('./' + items[i]);
       }
     }
   };
 
-  console.log('Init index');
+
+  require('./index.scss');
 
   var data = require('./index.json');
 
+  var req;
+
+  req = require.context('./project/swig/partials/', true, /^\.\/.*\.js$/);
   resolver(data.items[0]);
 
-  includer(data.includes);
+  console.log('Init index');
+
+  req = require.context('./vendor/', true, /^\.\/.*\.js$/);
+  includer(data.includes.vendor);
+
+  req = require.context('./library/', true, /^\.\/.*\.js$/);
+  includer(data.includes.library);
+
+  req = require.context('./project/', true, /^\.\/.*\.js$/);
+  console.log('data.includes.project', data.includes.project);
+  includer(data.includes.project);
 
 });

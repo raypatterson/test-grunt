@@ -1,3 +1,3 @@
-module.exports = {
-  console.log('Common C');
-};
+;(function(win) {
+  console.log('Init Common C');
+}(this));

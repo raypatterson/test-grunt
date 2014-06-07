@@ -2,7 +2,7 @@ var CommonsChunkPlugin = rekuire('node_modules/webpack/lib/optimize/CommonsChunk
 
 module.exports = {
   dev: {
-    context: '.',
+    context: '<%= app_files.webpack.cwd %>',
     entry: '<%= app_files.webpack.entry %>',
     resolve: {
       modulesDirectories: ['../node_modules', '../bower_components', './vendor'],

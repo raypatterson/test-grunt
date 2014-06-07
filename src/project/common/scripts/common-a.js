@@ -1,3 +1,3 @@
-module.exports = {
-  console.log('Common A');
-};
+;(function(win) {
+  console.log('Init Common A');
+}(this));
