@@ -25,14 +25,35 @@ $(function() {
   };
 
   var includer = function(items) {
-    console.log('items:', items);
+
+    // console.log('items:', items);
 
     if (items !== undefined) {
+      
       var i = 0;
       var l = items.length;
+
       for (i; i < l; i++) {
-        console.log('./' + items[i]);
-        req('./' + items[i]);
+
+        filepath = items[i];
+        context = filepath.substring(0, filepath.indexOf('/'));
+        filepath = filepath.substring(filepath.indexOf('/') + 1);
+
+        switch(context) {
+          case 'vendor':
+            req = require.context('./vendor/', true, /^\.\/.*\.js$/);
+            break;
+          case 'library':
+            req = require.context('./library/', true, /^\.\/.*\.js$/);
+            break;
+          case 'project':
+            req = require.context('./project/', true, /^\.\/.*\.js$/);
+            break;
+          default:
+            throw new Error('Handler for context "' + context + '" must be created for file: ' + filename);
+        }
+        
+        req('./' + filepath);
       }
     }
   };
@@ -43,20 +64,14 @@ $(function() {
   var data = require('./index.json');
 
   var req;
+  var filepath;
+  var context;
 
   req = require.context('./project/swig/partials/', true, /^\.\/.*\.js$/);
   resolver(data.items[0]);
+  
+  includer(data.includes);
 
   console.log('Init index');
-
-  req = require.context('./vendor/', true, /^\.\/.*\.js$/);
-  includer(data.includes.vendor);
-
-  req = require.context('./library/', true, /^\.\/.*\.js$/);
-  includer(data.includes.library);
-
-  req = require.context('./project/', true, /^\.\/.*\.js$/);
-  console.log('data.includes.project', data.includes.project);
-  includer(data.includes.project);
 
 });
