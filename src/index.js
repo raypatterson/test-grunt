@@ -25,18 +25,9 @@ $(function() {
     }
   };
 
-  var path = '';
-  path = __filename;
-  path = path.substring(0, path.lastIndexOf('.'));
+  console.log('Page Filename:', 'index');
 
-  var styleEntry = '.' + path + '.scss';
-  var dataEntry = '.' + path + '.json';
-
-  console.log('path', path);
-  console.log('styleEntry', styleEntry);
-  console.log('dataEntry', dataEntry);
-
-  require(styleEntry);
-  // require('./index.scss');
+  require('./index.scss');
   resolver(require('./index.json').items[0]);
+
 });

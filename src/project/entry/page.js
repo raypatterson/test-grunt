@@ -25,9 +25,9 @@ $(function() {
     }
   };
 
-  console.log('Page Filename:', 'page-a');
+  console.log('Page Filename:', '@@__SOURCE_FILENAME__');
 
-  require('./page-a.scss');
-  resolver(require('./page-a.json').items[0]);
+  require('./@@__SOURCE_FILENAME__.scss');
+  resolver(require('./@@__SOURCE_FILENAME__.json').items[0]);
 
 });

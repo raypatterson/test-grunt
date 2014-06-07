@@ -25,9 +25,19 @@ $(function() {
     }
   };
 
-  console.log('Page Filename:', 'page-a');
+  var path = 'index.js';
+  console.log('path', path);
+  
+  // var path = __filename;
+  // path = path.substring(0, path.lastIndexOf('.'));
 
-  require('./page-a.scss');
-  resolver(require('./page-a.json').items[0]);
+  // var styleEntry = '.' + path + '.scss';
+  // var dataEntry = '.' + path + '.json';
 
+  // console.log('path', path);
+  // console.log('styleEntry', styleEntry);
+  // console.log('dataEntry', dataEntry);
+
+  require('./index.scss');
+  resolver(require('./index.json').items[0]);
 });

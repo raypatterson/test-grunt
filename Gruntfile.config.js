@@ -27,6 +27,23 @@ module.exports = {
       watch: ['src/{,*/}*.{swig,json}', 'src/**/swig/**/*.html', '!src/vendor/{,*/}*.*']
     },
 
+    entry: {
+      js: {
+        watch: ['./src/project/entry/*.js'],
+        match: ['./src/*.json'],
+        cwd: './src/',
+        ext: 'json'
+      }
+    },
+
+    replace: {
+      src: ['./src/.tmp/*'],
+      dest: './src/',
+      rename: function(dest, src) {
+        return dest + src + '.js';
+      }
+    },
+
     webpack: {
       watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
       match: ['./src/*.js', '!./src/*.spec.js'],

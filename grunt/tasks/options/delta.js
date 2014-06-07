@@ -83,11 +83,19 @@ module.exports = {
   },
 
   /**
+   * When Entry files change, we need to compile them.
+   */
+  entry: {
+    files: ['<%= app_files.entry.js.watch %>'],
+    tasks: ['entry:dev', 'replace:dev']
+  },
+
+  /**
    * When Webpack files change, we need to compile them.
    */
   webpack: {
     files: ['<%= app_files.webpack.watch %>'],
-    tasks: ['webpack:dev']
+    tasks: ['webpackconfig:dev', 'webpack:dev']
   },
 
   /**

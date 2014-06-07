@@ -3,16 +3,16 @@
  */
 
 module.exports = {
-  dist: {
+  dev: {
     options: {
-      // pass, we use built-in replacements
     },
     files: [
       {
         expand: true, 
         flatten: true, 
-        src: ['<% app_files.replace %>'], 
-        dest: '<% source_dir %>'
+        src: '<%= app_files.replace.src %>', 
+        dest: '<%= app_files.replace.dest %>',
+        rename: '<%= app_files.replace.rename %>'
       }
     ]
   }

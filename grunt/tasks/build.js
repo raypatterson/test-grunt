@@ -8,6 +8,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean', 
     'swig:dev', 
+    'entry:dev', 
+    'replace:dev', 
     'webpackconfig:dev', 
     'webpack:dev', 
     // 'compass:build', 
