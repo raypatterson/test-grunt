@@ -1,6 +1,9 @@
 {
 	"path": "index",
 	"title": "Home",
+	"includes": [
+		"index-include.js"
+	],
 	"items": [{
 		"partial": "templates/template-a",
 		"items": [{

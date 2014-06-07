@@ -8,10 +8,12 @@ $(function() {
 
   console.log('Document is ready.');
 
+  require('./index.scss');
+
   var resolver = function(item) {
 
     if (item.partial) {
-      if (item.items !== undefined && item.items.length !== 0) {
+      if (item.items !== undefined) {
         (function(items){
           var i = 0;
           var l = items.length;
@@ -25,9 +27,24 @@ $(function() {
     }
   };
 
-  console.log('Page Filename:', 'index');
+  var includer = function(items) {
+    console.log('items:', items);
 
-  require('./index.scss');
-  resolver(require('./index.json').items[0]);
+    if (items !== undefined) {
+      var i = 0;
+      var l = items.length;
+      for (i; i < l; i++) {
+        require('./project/pages/' + items[i]);
+      }
+    }
+  };
+
+  console.log('Init index');
+
+  var data = require('./index.json');
+
+  resolver(data.items[0]);
+
+  includer(data.includes);
 
 });

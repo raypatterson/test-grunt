@@ -46,7 +46,7 @@ module.exports = {
 
     webpack: {
       watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
-      match: ['./src/*.js', '!./src/*.spec.js'],
+      match: ['./src/*.js', '!./src/*.{include,spec}.js'],
       cwd: './src/',
       ext: 'js'
     },

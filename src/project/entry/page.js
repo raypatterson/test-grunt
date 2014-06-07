@@ -8,10 +8,12 @@ $(function() {
 
   console.log('Document is ready.');
 
+  require('./@@__SOURCE_FILENAME__.scss');
+
   var resolver = function(item) {
 
     if (item.partial) {
-      if (item.items !== undefined && item.items.length !== 0) {
+      if (item.items !== undefined) {
         (function(items){
           var i = 0;
           var l = items.length;
@@ -25,9 +27,24 @@ $(function() {
     }
   };
 
-  console.log('Page Filename:', '@@__SOURCE_FILENAME__');
+  var includer = function(items) {
+    console.log('items:', items);
 
-  require('./@@__SOURCE_FILENAME__.scss');
-  resolver(require('./@@__SOURCE_FILENAME__.json').items[0]);
+    if (items !== undefined) {
+      var i = 0;
+      var l = items.length;
+      for (i; i < l; i++) {
+        require('./project/pages/' + items[i]);
+      }
+    }
+  };
+
+  console.log('Init @@__SOURCE_FILENAME__');
+
+  var data = require('./@@__SOURCE_FILENAME__.json');
+
+  resolver(data.items[0]);
+
+  includer(data.includes);
 
 });
