@@ -1,6 +1,15 @@
 {
 	"path": "page-a",
 	"title": "Home",
+	"includes": [
+		"vendor/vendor-b/scripts.js",
+		"vendor/vendor-c/scripts.js",
+		"library/scripts/library-b.js",
+		"library/scripts/library-c.js",
+		"project/pages/page-a/scripts.js",
+		"project/common/scripts/common-b.js",
+		"project/common/scripts/common-c.js"
+	],
 	"items": [{
 		"partial": "templates/template-b",
 		"items": [{

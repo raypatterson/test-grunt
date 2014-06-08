@@ -29,7 +29,7 @@ $(function() {
     // console.log('items:', items);
 
     if (items !== undefined) {
-      
+
       var i = 0;
       var l = items.length;
 
@@ -57,7 +57,6 @@ $(function() {
       }
     }
   };
-
 
   require('./page-a.scss');
 
