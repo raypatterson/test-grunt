@@ -21,6 +21,7 @@ $(function() {
         }(item.items));
       }
       req('./' + item.partial + '/scripts.js');
+      req('./' + item.partial + '/styles.scss');
     }
   };
 
@@ -66,7 +67,7 @@ $(function() {
   var filepath;
   var context;
 
-  req = require.context('./project/swig/partials/', true, /^\.\/.*\.js$/);
+  req = require.context('./project/swig/partials/', true, /^\.\/.*\.js|\.scss$/);
   resolver(data.items[0]);
   
   includer(data.includes);
