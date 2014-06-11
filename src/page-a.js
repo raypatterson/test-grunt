@@ -1,77 +1,41 @@
-var is_passing = true;
 
-console.log('Touch is ' + (Modernizr.touch ? 'enabled' : 'disabled') + '.');
+require('jquery');
 
-$ = require('jquery');
+require('./vendor/vendor-a/scripts.js');
 
-$(function() {
+require('./vendor/vendor-c/scripts.js');
 
-  console.log('Document is ready.');
+require('./library/scripts/library-a.js');
 
-  var resolver = function(item) {
+require('./library/scripts/library-c.js');
 
-    if (item.partial) {
-      if (item.items !== undefined) {
-        (function(items){
-          var i = 0;
-          var l = items.length;
-          for (i; i < l; i++) {
-            resolver(items[i]);
-          }
-        }(item.items));
-      }
-      req('./' + item.partial + '/scripts.js');
-      req('./' + item.partial + '/styles.scss');
-    }
-  };
+require('./project/common/scripts/common-a.js');
 
-  var includer = function(items) {
+require('./project/common/scripts/common-c.js');
 
-    // console.log('items:', items);
+require('./project/pages/page-a/scripts.js');
 
-    if (items !== undefined) {
+require('./project/pages/page-a/styles.scss');
 
-      var i = 0;
-      var l = items.length;
+require('./project/swig/partials/components/component-a/scripts.js');
 
-      for (i; i < l; i++) {
+require('./project/swig/partials/components/component-a/styles.scss');
 
-        filepath = items[i];
-        context = filepath.substring(0, filepath.indexOf('/'));
-        filepath = filepath.substring(filepath.indexOf('/') + 1);
+require('./project/swig/partials/components/component-c/scripts.js');
 
-        switch(context) {
-          case 'vendor':
-            req = require.context('./vendor/', true, /^\.\/.*\.js$/);
-            break;
-          case 'library':
-            req = require.context('./library/', true, /^\.\/.*\.js$/);
-            break;
-          case 'project':
-            req = require.context('./project/', true, /^\.\/.*\.js$/);
-            break;
-          default:
-            throw new Error('Handler for context "' + context + '" must be created for file: ' + filename);
-        }
-        
-        req('./' + filepath);
-      }
-    }
-  };
+require('./project/swig/partials/components/component-c/styles.scss');
 
-  require('./page-a.scss');
+require('./project/swig/partials/modules/module-a/scripts.js');
 
-  var data = require('./page-a.json');
+require('./project/swig/partials/modules/module-a/styles.scss');
 
-  var req;
-  var filepath;
-  var context;
+require('./project/swig/partials/modules/module-c/scripts.js');
 
-  req = require.context('./project/swig/partials/', true, /^\.\/.*\.js|\.scss$/);
-  resolver(data.items[0]);
-  
-  includer(data.includes);
+require('./project/swig/partials/modules/module-c/styles.scss');
 
-  console.log('Init page-a');
+require('./project/swig/partials/templates/template-a/scripts.js');
 
-});
+require('./project/swig/partials/templates/template-a/styles.scss');
+
+
+console.log('Init page-a');

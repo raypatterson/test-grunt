@@ -28,12 +28,17 @@ module.exports = {
     },
 
     entry: {
-      js: {
-        watch: ['./src/_entry/*.js'],
-        match: ['./src/*.json'],
-        cwd: './src/',
-        ext: 'json'
-      }
+      watch: ['./src/_entry/*.js'],
+      match: ['./src/*.json'],
+      cwd: './src/',
+      ext: 'json'
+    },
+
+    ensure: {
+      watch: ['./src/_entry/*.js'],
+      match: ['./src/*.json'],
+      cwd: './src/',
+      ext: 'json'
     },
 
     replace: {
@@ -62,7 +67,7 @@ module.exports = {
 
     bower: '.tmp/bower.js',
 
-    js: ['src/{,*/}*.js', '!src/{,*/}*.spec.js'],
+    js: ['src/{,*/}*.js', '!src/{,*/}*.spec.js', '!src/_entry/*.js'],
     jsunit: ['src/**/*.spec.js'],
 
     coffee: ['src/{,*/}*.coffee', '!src/{,*/}*.spec.coffee'],

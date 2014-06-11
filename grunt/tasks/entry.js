@@ -4,7 +4,7 @@ module.exports = function(grunt) {
 
   grunt.registerMultiTask('entry', 'Prepare entry points', function() {
 
-    var data = this.data.js;
+    var data = this.data;
     var arr = grunt.file.expand(data.match);
     var entries = [];
 

@@ -1,26 +1,26 @@
 {
-  "path": "page-a",
-  "title": "Page A",
+  "path": "page-b",
+  "title": "Page B",
   "includes": [
     "jquery",
-    "./vendor/vendor-a/scripts.js",
+    "./vendor/vendor-b/scripts.js",
     "./vendor/vendor-c/scripts.js",
-    "./library/scripts/library-a.js",
+    "./library/scripts/library-b.js",
     "./library/scripts/library-c.js",
-    "./project/common/scripts/common-a.js",
+    "./project/common/scripts/common-b.js",
     "./project/common/scripts/common-c.js",
-    "./project/pages/page-a/scripts.js",
-    "./project/pages/page-a/styles.scss"
+    "./project/pages/page-b/scripts.js",
+    "./project/pages/page-b/styles.scss"
   ],
   "items": [{
-    "partial": "templates/template-a",
+    "partial": "templates/template-b",
     "items": [{
-        "partial": "modules/module-a",
+        "partial": "modules/module-b",
         "items": [{
-            "partial": "components/component-a",
+            "partial": "components/component-b",
             "classes": "custom-style-foo"
           }, {
-            "partial": "components/component-a",
+            "partial": "components/component-b",
             "classes": "custom-style-bar"
           }, {
             "partial": "components/component-c",
@@ -28,33 +28,33 @@
           }
         ]
       }, {
-        "partial": "modules/module-a",
+        "partial": "modules/module-b",
         "items": [{
             "partial": "components/component-c"
           }, {
-            "partial": "components/component-a"
+            "partial": "components/component-b"
           }, {
-            "partial": "components/component-a"
+            "partial": "components/component-b"
           }, {
-            "partial": "components/component-a"
+            "partial": "components/component-b"
           }, {
-            "partial": "components/component-a"
+            "partial": "components/component-b"
           }, {
             "partial": "components/component-c"
           }, {
-            "partial": "components/component-a"
+            "partial": "components/component-b"
           }
         ]
       }, {
         "partial": "modules/module-c",
         "items": [{
-            "partial": "components/component-a",
+            "partial": "components/component-b",
             "classes": "custom-style-baz"
           }, {
             "partial": "components/component-c",
             "classes": "custom-style-foo"
           }, {
-            "partial": "components/component-a",
+            "partial": "components/component-b",
             "classes": "custom-style-bar"
           }
         ]
