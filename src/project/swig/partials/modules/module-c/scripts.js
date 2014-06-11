@@ -1,4 +1,7 @@
-;(function(win) {
-  var $el = $('.module-c');
-  console.log('Init Module C', $el);
-}(this));
+var $ = require('jquery');
+
+module.exports = function() {
+  $(function() {
+    console.log('Init Module C', $('.component-c'));
+  });
+}();

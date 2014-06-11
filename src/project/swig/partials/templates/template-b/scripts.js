@@ -1,4 +1,7 @@
-;(function(win) {
-  var $el = $('.template-b');
-  console.log('Init Template B', $el);
-}(this));
+var $ = require('jquery');
+
+module.exports = function() {
+  $(function() {
+    console.log('Init Template B', $('.template-b'));
+  });
+}();

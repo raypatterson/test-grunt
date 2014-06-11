@@ -1,3 +1,1 @@
-;(function(win) {
-  console.log('Init Library B');
-}(this));
+module.exports = console.log('Init Library B');

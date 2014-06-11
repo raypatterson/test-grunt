@@ -1,3 +1,1 @@
-;(function(win) {
-  console.log('Init Index Include');
-}(this));
+module.exports = console.log('Init Index Include');

@@ -1,3 +1,1 @@
-;(function(win) {
-  console.log('Init Page A Include');
-}(this));
+module.exports = console.log('Init Page B Include');
