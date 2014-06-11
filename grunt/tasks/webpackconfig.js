@@ -16,7 +16,6 @@ module.exports = function(grunt) {
       entry[key] = './' + val; 
     });
 
-    console.log('arr', arr);
     console.log('entry', entry);
 
     grunt.config('app_files.webpack.entry', entry);

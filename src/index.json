@@ -1,9 +1,0 @@
-{
-	"path": "index",
-	"title": "Home",
-	"includes": [
-		"project/common/scripts/common-a.js",
-    "project/common/scripts/common-b.js",
-		"project/common/scripts/common-c.js"
-	]
-}
