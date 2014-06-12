@@ -13,6 +13,7 @@ module.exports = {
   compile_dir: 'dist',
   bower_dir: 'bower_components',
   node_dir: 'node_modules',
+  temp_dir: './src/.tmp/',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -26,7 +27,7 @@ module.exports = {
 
     swig: {
       src: __dirname + '/src/project/swig',
-      watch: ['src/{,*/}*.{swig,json}', 'src/**/swig/**/*.html', '!src/vendor/{,*/}*.*']
+      watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*']
     },
 
     entry: {
@@ -45,18 +46,18 @@ module.exports = {
 
     replace: {
       src: ['./src/.tmp/*'],
-      dest: './src/',
+      dest: './src/.tmp/',
       rename: function(dest, src) {
         return dest + src + '.js';
       }
     },
 
     webpack: {
-      context: __dirname + '/src/',
+      context: './',
       module_dirs: ['../node_modules', '../bower_components', './vendor', './library', './project', './project/swig/partials/'],
-      watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
-      match: ['src/*.js', '!src/*.spec.js'],
-      cwd: 'src/',
+      watch: ['./src/{,*/}*.{js,json,scss}', '!./src/vendor/{,*/}*.*'],
+      match: ['./src/*.js', '!./src/*.spec.js'],
+      cwd: './src/',
       ext: 'js'
     },
 

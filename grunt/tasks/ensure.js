@@ -8,7 +8,9 @@ module.exports = function(grunt) {
 
     var data = this.data;
     var arr = grunt.file.expand(data.match);
+    var temp_dir = grunt.config('temp_dir');
     var filenames = [];
+    var filename;
     var added;
     var json;
     var resolver;
@@ -52,26 +54,23 @@ module.exports = function(grunt) {
       val = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length);
       key = val.substring(0, val.lastIndexOf(data.ext) - 1);
 
-      filenames = json.includes;
+      console.log(key +':'+val);
 
-      // filenames = [];
-      // _.each(json.includes, function(filename) {
-      //   filenames.push(filename.indexOf('./') === -1 ? './' + filename : filename);
-      // });
+      filenames = json.includes;
 
       addPartials(json, filenames);
 
-      template = grunt.file.read('./src/.tmp/' + key);
+      filename = temp_dir + key + '.js';
+
+      template = grunt.file.read(filename);
 
       contents = grunt.template.process(template , { data: { items: filenames }});
 
-      grunt.file.write('./src/.tmp/' + key, contents);
+      grunt.file.write(filename, contents);
 
     });
 
     console.log('filenames', filenames);
-
-    // grunt.config('app_files.webpack.ensure', filenames);
 
   });
 

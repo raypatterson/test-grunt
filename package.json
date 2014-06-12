@@ -15,6 +15,7 @@
   "devDependencies": {
     "browserify": "~3.30.2",
     "css-loader": "^0.6.12",
+    "fs-extra": "^0.9.1",
     "glob": "~3.2.7",
     "grunt": "~0.4.1",
     "grunt-autoprefixer": "~0.2.0",

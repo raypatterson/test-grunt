@@ -1,3 +1,6 @@
+var _ = rekuire('lodash');
+var fs = rekuire('fs-extra');
+
 module.exports = function(grunt) {
 
   console.log('Loaded : entry.js');
@@ -8,19 +11,22 @@ module.exports = function(grunt) {
     var arr = grunt.file.expand(data.match);
     var entries = [];
 
-    grunt.util._.map(arr, function( val , key ) {
+    _.map(arr, function( val , key ) {
       key = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length, val.lastIndexOf(data.ext) - 1);
       entries.push(key); 
     });
 
     var files = grunt.file.expand(data.watch);
 
-    grunt.util._.each(files, function(file) {
-      grunt.util._.each(entries, function(entry) {
-        grunt.file.copy(file, data.cwd + '/.tmp/' + entry);
+    var temp_dir = grunt.config('temp_dir');
+
+    fs.removeSync(temp_dir);
+
+    _.each(files, function(file) {
+      _.each(entries, function(entry) {
+        grunt.file.copy(file, temp_dir + entry + '.js');
       });
     });
-
   });
 
 };

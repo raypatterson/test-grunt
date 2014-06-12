@@ -10,7 +10,7 @@ module.exports = function(grunt) {
     'swig:dev', 
     'entry:dev', 
     'ensure:dev', 
-    'replace:dev', 
+    // 'replace:dev', 
     'webpackconfig:dev', 
     'webpack:dev', 
     // 'compass:build', 
