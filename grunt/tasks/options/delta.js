@@ -37,8 +37,8 @@ module.exports = {
    */
   jssrc: {
     files: [
-          '<%= app_files.js %>'
-        ],
+      '<%= app_files.js %>'
+    ],
     tasks: ['jshint:src', 'modernizr']
     // tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['jshint:src', 'karma:unit:run', 'copy:build_appjs']
@@ -50,8 +50,8 @@ module.exports = {
    */
   coffeesrc: {
     files: [
-          '<%= app_files.coffee %>'
-        ],
+      '<%= app_files.coffee %>'
+    ],
     tasks: ['coffeelint:src', 'modernizr']
     // tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs']
@@ -85,9 +85,9 @@ module.exports = {
   /**
    * When Entry files change, we need to compile them.
    */
-  entry: {
-    files: ['<%= app_files.entry.watch %>'],
-    tasks: ['entry:dev', 'replace:dev']
+  webpackconfig: {
+    files: ['<%= app_files.webpackconfig.watch %>'],
+    tasks: ['webpackconfig:dev', 'webpackrequire:dev']
   },
 
   /**
@@ -95,7 +95,7 @@ module.exports = {
    */
   webpack: {
     files: ['<%= app_files.webpack.watch %>'],
-    tasks: ['webpackconfig:dev', 'webpack:dev']
+    tasks: ['webpack:dev']
   },
 
   /**
@@ -122,8 +122,8 @@ module.exports = {
    */
   jsunit: {
     files: [
-          '<%= app_files.jsunit %>'
-        ],
+      '<%= app_files.jsunit %>'
+    ],
     tasks: ['jshint:test'],
     // tasks: ['jshint:test', 'karma:unit:run'],
     options: {
@@ -137,8 +137,8 @@ module.exports = {
    */
   coffeeunit: {
     files: [
-          '<%= app_files.coffeeunit %>'
-        ],
+      '<%= app_files.coffeeunit %>'
+    ],
     tasks: ['coffeelint:test'],
     // tasks: ['coffeelint:test', 'karma:unit:run'],
     options: {

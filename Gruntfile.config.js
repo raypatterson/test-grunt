@@ -30,26 +30,18 @@ module.exports = {
       watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*']
     },
 
-    entry: {
+    webpackconfig: {
       watch: ['./src/_entry/*.js'],
       match: ['./src/*.json'],
       cwd: './src/',
       ext: 'json'
     },
 
-    ensure: {
+    webpackrequire: {
       watch: ['./src/_entry/*.js'],
       match: ['./src/*.json'],
       cwd: './src/',
       ext: 'json'
-    },
-
-    replace: {
-      src: ['./src/.tmp/*'],
-      dest: './src/.tmp/',
-      rename: function(dest, src) {
-        return dest + src + '.js';
-      }
     },
 
     webpack: {
@@ -60,6 +52,14 @@ module.exports = {
       cwd: './src/',
       ext: 'js'
     },
+
+    // replace: {
+    //   src: ['./src/.tmp/*'],
+    //   dest: './src/.tmp/',
+    //   rename: function(dest, src) {
+    //     return dest + src + '.js';
+    //   }
+    // },
 
     favicons: {
       src: 'src/project/images/favicons/__FAVICON_SOURCE__.png',

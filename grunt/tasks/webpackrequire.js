@@ -2,9 +2,9 @@ var _ = require('lodash');
 
 module.exports = function(grunt) {
 
-  console.log('Loaded : ensuresjs');
+  console.log('Loaded : webpackrequire.js');
 
-  grunt.registerMultiTask('ensure', 'Configure Ensures', function() {
+  grunt.registerMultiTask('webpackrequire', 'Webpack Require', function() {
 
     var data = this.data;
     var arr = grunt.file.expand(data.match);

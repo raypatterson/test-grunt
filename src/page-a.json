@@ -3,7 +3,6 @@
   "title": "Page A",
   "classes": "page-a",
   "includes": [
-    "jquery",
     "vendor-a/scripts",
     "vendor-c/scripts",
     "scripts/library-a",

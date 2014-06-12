@@ -1,8 +1,8 @@
-
 module.exports = {
   dev: {
-    match: '<%= app_files.webpack.match %>',
-    cwd: '<%= app_files.webpack.cwd %>',
-    ext: '<%= app_files.webpack.ext %>'
+    watch: '<%= app_files.webpackconfig.watch %>',
+    match: '<%= app_files.webpackconfig.match %>',
+    cwd: '<%= app_files.webpackconfig.cwd %>',
+    ext: '<%= app_files.webpackconfig.ext %>'
   }
 };

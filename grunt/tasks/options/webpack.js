@@ -20,7 +20,7 @@ module.exports = {
       loaders: [
         { 
           test: /\.scss$/, 
-          loader: 'style!css!sass?outputStyle=expanded' 
+          loader: 'style!css!sass?outputStyle=expanded!autoprefixer-loader' 
         }, { 
           test: /\.json$/, 
           loader: 'json' 

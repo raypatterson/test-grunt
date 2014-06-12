@@ -8,19 +8,12 @@ module.exports = function(grunt) {
   grunt.registerTask('build', [
     'clean', 
     'swig:dev', 
-    'entry:dev', 
-    'ensure:dev', 
-    // 'replace:dev', 
     'webpackconfig:dev', 
+    'webpackrequire:dev', 
     'webpack:dev', 
-    // 'compass:build', 
     'jshint', 
-    // 'coffeelint', 'coffee',
-    'concat:build_css', 'autoprefixer',
     'copy:build_app_assets',
     'modernizr'
-    // , 'index:build'
-    // , 'karmaconfig', 'karma:continuous'
   ]);
 
 };
