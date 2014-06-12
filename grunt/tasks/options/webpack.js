@@ -3,10 +3,10 @@ var DedupePlugin = rekuire('node_modules/webpack/lib/optimize/DedupePlugin');
 
 module.exports = {
   dev: {
-    context: '<%= app_files.webpack.cwd %>',
+    context: '<%= app_files.webpack.context %>',
     entry: '<%= app_files.webpack.entry %>',
     resolve: {
-      modulesDirectories: ['../node_modules', '../bower_components', './vendor'],
+      modulesDirectories: ['../node_modules', '../bower_components', './vendor', './library', './project'],
     },
     output: {
       path: '<%= build_dir %>',

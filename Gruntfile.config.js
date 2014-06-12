@@ -11,6 +11,8 @@ module.exports = {
   source_dir: 'src',
   build_dir: '.tmp',
   compile_dir: 'dist',
+  bower_dir: 'bower_components',
+  node_dir: 'node_modules',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -50,6 +52,7 @@ module.exports = {
     },
 
     webpack: {
+      context: __dirname + '/src/',
       watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
       match: ['src/*.js', '!src/*.spec.js'],
       cwd: 'src/',

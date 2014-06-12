@@ -1,6 +1,7 @@
 {
 	"path": "index",
 	"title": "Home",
+	"classes": "index",
 	"includes": [
 		"vendor/vendor-a/scripts.js",
 		"vendor/vendor-c/scripts.js",

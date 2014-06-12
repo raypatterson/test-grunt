@@ -1,6 +1,7 @@
 {
   "path": "page-b",
   "title": "Page B",
+  "classes": "page-b",
   "includes": [
     "jquery",
     "./vendor/vendor-b/scripts.js",

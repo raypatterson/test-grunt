@@ -1,7 +1,1 @@
-var $ = require('jquery');
-
-module.exports = function() {
-  $(function() {
-    console.log('Init Module C', $('.component-c'));
-  });
-}();
+require('utils/hello.js')('Init Module C', '.module-c');
