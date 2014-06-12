@@ -3,13 +3,14 @@
 	"title": "Home",
 	"classes": "index",
 	"includes": [
-		"vendor/vendor-a/scripts.js",
-		"vendor/vendor-c/scripts.js",
-		"library/scripts/library-a.js",
-		"library/scripts/library-c.js",
-		"project/pages/index/scripts.js",
-		"project/common/scripts/common-a.js",
-		"project/common/scripts/common-c.js"
+		"vendor-a/scripts",
+		"vendor-b/scripts",
+		"scripts/library-b",
+		"scripts/library-c",
+		"common/scripts/common-a",
+		"common/scripts/common-c",
+    "pages/index/scripts",
+    "pages/index/styles.scss"
 	],
 	"items": [{
 		"partial": "templates/template-a",
@@ -19,7 +20,7 @@
 						"partial": "components/component-a",
 						"classes": "custom-style-foo"
 					}, {
-						"partial": "components/component-a",
+						"partial": "components/component-b",
 						"classes": "custom-style-bar"
 					}, {
 						"partial": "components/component-c",
@@ -27,11 +28,11 @@
 					}
 				]
 			}, {
-				"partial": "modules/module-a",
+				"partial": "modules/module-b",
 				"items": [{
 						"partial": "components/component-a"
 					}, {
-						"partial": "components/component-a"
+						"partial": "components/component-b"
 					}, {
 						"partial": "components/component-c"
 					}, {
@@ -50,7 +51,7 @@
 						"partial": "components/component-c",
 						"classes": "custom-style-baz"
 					}, {
-						"partial": "components/component-a",
+						"partial": "components/component-b",
 						"classes": "custom-style-foo"
 					}, {
 						"partial": "components/component-a",
