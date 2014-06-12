@@ -34,8 +34,8 @@ module.exports = function(grunt) {
 
           if (added[item.partial] !== true) {
             added[item.partial] = true;
-            arr.push('./project/swig/partials/' + item.partial + '/scripts.js');
-            arr.push('./project/swig/partials/' + item.partial + '/styles.scss');
+            arr.push(item.partial + '/scripts.js');
+            arr.push(item.partial + '/styles.scss');
           }
         }
       };

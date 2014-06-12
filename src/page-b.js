@@ -1,41 +1,41 @@
 
 require('jquery');
 
-require('./vendor/vendor-b/scripts.js');
+require('vendor-b/scripts');
 
-require('./vendor/vendor-c/scripts.js');
+require('vendor-c/scripts');
 
-require('./library/scripts/library-b.js');
+require('scripts/library-b');
 
-require('./library/scripts/library-c.js');
+require('scripts/library-c');
 
-require('./project/common/scripts/common-b.js');
+require('common/scripts/common-b');
 
-require('./project/common/scripts/common-c.js');
+require('common/scripts/common-c');
 
-require('./project/pages/page-b/scripts.js');
+require('pages/page-b/scripts');
 
-require('./project/pages/page-b/styles.scss');
+require('pages/page-b/styles.scss');
 
-require('./project/swig/partials/components/component-b/scripts.js');
+require('components/component-b/scripts.js');
 
-require('./project/swig/partials/components/component-b/styles.scss');
+require('components/component-b/styles.scss');
 
-require('./project/swig/partials/components/component-c/scripts.js');
+require('components/component-c/scripts.js');
 
-require('./project/swig/partials/components/component-c/styles.scss');
+require('components/component-c/styles.scss');
 
-require('./project/swig/partials/modules/module-b/scripts.js');
+require('modules/module-b/scripts.js');
 
-require('./project/swig/partials/modules/module-b/styles.scss');
+require('modules/module-b/styles.scss');
 
-require('./project/swig/partials/modules/module-c/scripts.js');
+require('modules/module-c/scripts.js');
 
-require('./project/swig/partials/modules/module-c/styles.scss');
+require('modules/module-c/styles.scss');
 
-require('./project/swig/partials/templates/template-b/scripts.js');
+require('templates/template-b/scripts.js');
 
-require('./project/swig/partials/templates/template-b/styles.scss');
+require('templates/template-b/styles.scss');
 
 
 console.log('Init page-b');

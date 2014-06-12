@@ -6,7 +6,7 @@ module.exports = {
     context: '<%= app_files.webpack.context %>',
     entry: '<%= app_files.webpack.entry %>',
     resolve: {
-      modulesDirectories: ['../node_modules', '../bower_components', './vendor', './library', './project'],
+      modulesDirectories: '<%= app_files.webpack.module_dirs %>',
     },
     output: {
       path: '<%= build_dir %>',

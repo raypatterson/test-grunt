@@ -53,6 +53,7 @@ module.exports = {
 
     webpack: {
       context: __dirname + '/src/',
+      module_dirs: ['../node_modules', '../bower_components', './vendor', './library', './project', './project/swig/partials/'],
       watch: ['src/{,*/}*.{js,json,scss}', '!src/vendor/{,*/}*.*'],
       match: ['src/*.js', '!src/*.spec.js'],
       cwd: 'src/',

@@ -4,14 +4,14 @@
   "classes": "page-b",
   "includes": [
     "jquery",
-    "./vendor/vendor-b/scripts.js",
-    "./vendor/vendor-c/scripts.js",
-    "./library/scripts/library-b.js",
-    "./library/scripts/library-c.js",
-    "./project/common/scripts/common-b.js",
-    "./project/common/scripts/common-c.js",
-    "./project/pages/page-b/scripts.js",
-    "./project/pages/page-b/styles.scss"
+    "vendor-b/scripts",
+    "vendor-c/scripts",
+    "scripts/library-b",
+    "scripts/library-c",
+    "common/scripts/common-b",
+    "common/scripts/common-c",
+    "pages/page-b/scripts",
+    "pages/page-b/styles.scss"
   ],
   "items": [{
     "partial": "templates/template-b",

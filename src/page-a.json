@@ -4,14 +4,14 @@
   "classes": "page-a",
   "includes": [
     "jquery",
-    "./vendor/vendor-a/scripts.js",
-    "./vendor/vendor-c/scripts.js",
-    "./library/scripts/library-a.js",
-    "./library/scripts/library-c.js",
-    "./project/common/scripts/common-a.js",
-    "./project/common/scripts/common-c.js",
-    "./project/pages/page-a/scripts.js",
-    "./project/pages/page-a/styles.scss"
+    "vendor-a/scripts",
+    "vendor-c/scripts",
+    "scripts/library-a",
+    "scripts/library-c",
+    "common/scripts/common-a",
+    "common/scripts/common-c",
+    "pages/page-a/scripts",
+    "pages/page-a/styles.scss"
   ],
   "items": [{
     "partial": "templates/template-a",
