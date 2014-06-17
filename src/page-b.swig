@@ -1,0 +1,1 @@
+{% extends './project/swig/layouts/page.html' %}
