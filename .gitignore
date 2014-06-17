@@ -91,5 +91,3 @@ target
 components
 bin
 vendor
-*.sw*
-*~
