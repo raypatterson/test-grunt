@@ -1,0 +1,19 @@
+---
+layout: _base
+---
+
+{% block base %}
+
+<div class="template {% block classes %}{% endblock %} {{ classes }}">
+
+  {% block content %}{% endblock %}
+
+  {% if items %}
+  <div class="items">
+    {% block items %}{% endblock %}
+  </div>
+  {% endif %}
+
+</div>
+
+{% endblock %}
