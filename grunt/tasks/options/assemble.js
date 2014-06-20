@@ -12,13 +12,8 @@ module.exports = {
       cache: false,
       locals: {
         get_page_title: function(append) {
-          // var title = globals.page_title;
           var title = 'Page Title';
-          if (append !== undefined) {
-            return title + ' | ' + append;
-          } else {
-            return title;
-          }
+          return (append !== undefined) ? title + ' | ' + append : title;
         },
         get_partial_path: function(path) {
           var src = require('grunt').config.get('app_files').swig.src;
