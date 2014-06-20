@@ -1,6 +1,5 @@
 module.exports = {
   options: {
-    flatten: true,
     engine: 'swig',
     site: './src/',
     data: ['./src/project/pages/**/*.{json,yml}'],
@@ -22,9 +21,13 @@ module.exports = {
       }
     }
   },
-  site: {
-    files: {
-      './.tmp/': './src/project/pages/**/*.swig'
+  dev: {
+    expand: true,
+    src: ['./src/**/*.swig'],
+    dest: './.tmp/',
+    rename: function(dest, src) {
+      var filepath = src.split('./src/project/pages/')[1].replace('swig', 'html');
+      return dest + filepath;
     }
   }
 }
