@@ -79,7 +79,7 @@ module.exports = {
    */
   swig: {
     files: ['<%= app_files.swig.watch %>'],
-    tasks: ['swig:dev']
+    tasks: ['assemble']
   },
 
   /**
