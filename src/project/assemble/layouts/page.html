@@ -16,7 +16,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script type="text/javascript" src="modernizr.js"></script>
         <script type="text/javascript" src="commons.js"></script>
-        <script type="text/javascript" src="{{ path }}.js"></script>
+        <script type="text/javascript" src="{% if path %}{{ path }}/{% endif %}scripts.js"></script>
     </head>
     <body class="page {{ classes }}">
         {{ helpers.get_items(items) }}

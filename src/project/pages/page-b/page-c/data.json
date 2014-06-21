@@ -1,7 +1,7 @@
 {
-	"path": "index",
-	"title": "Home",
-	"classes": "index",
+	"path": "page-b/page-c",
+	"title": "Page C",
+	"classes": "page-c",
 	"includes": [
 		"vendor-a/scripts",
 		"vendor-b/scripts",
@@ -9,8 +9,8 @@
 		"scripts/library-c",
 		"common/scripts/common-a",
 		"common/scripts/common-c",
-		"pages/index/scripts",
-		"pages/index/styles.scss"
+		"pages/page-b/page-c/scripts",
+		"pages/page-b/page-c/styles.scss"
 	],
 	"items": [{
 		"partial": "templates/template-a",

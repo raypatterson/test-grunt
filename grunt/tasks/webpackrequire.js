@@ -25,7 +25,7 @@ module.exports = function(grunt) {
 
         if (item.partial) {
           if (item.items) {
-            (function(items){
+            (function(items) {
               var i = 0;
               var l = items.length;
               for (i; i < l; i++) {
@@ -47,14 +47,14 @@ module.exports = function(grunt) {
       }
     }
 
-    _.map(arr, function( val , key ) {
+    _.map(arr, function(val, key) {
 
       json = rekuire(val);
 
       val = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length);
-      key = val.substring(0, val.lastIndexOf(data.ext) - 1);
+      key = val.substring(0, val.lastIndexOf(data.ext) - 1).replace('data', 'scripts');
 
-      console.log(key +':'+val);
+      console.log(key + ':' + val);
 
       filenames = json.includes;
 
@@ -64,7 +64,11 @@ module.exports = function(grunt) {
 
       template = grunt.file.read(filename);
 
-      contents = grunt.template.process(template , { data: { items: filenames }});
+      contents = grunt.template.process(template, {
+        data: {
+          items: filenames
+        }
+      });
 
       grunt.file.write(filename, contents);
 

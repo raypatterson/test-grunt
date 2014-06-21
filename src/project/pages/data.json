@@ -1,5 +1,5 @@
 {
-	"path": "index",
+	"path": "",
 	"title": "Home",
 	"classes": "index",
 	"includes": [
@@ -9,8 +9,8 @@
 		"scripts/library-c",
 		"common/scripts/common-a",
 		"common/scripts/common-c",
-		"pages/index/scripts",
-		"pages/index/styles.scss"
+		"pages/scripts",
+		"pages/styles.scss"
 	],
 	"items": [{
 		"partial": "templates/template-a",

@@ -2,7 +2,7 @@ module.exports = {
   options: {
     engine: 'swig',
     site: './src/',
-    data: ['./src/project/pages/**/*.{json,yml}'],
+    data: ['./src/project/pages/*.{json,yml}'],
     partials: ['./src/project/assemble/partials/**/*.html', './src/project/assemble/macros/*.html'],
     layoutdir: './src/project/assemble/layouts',
     layoutext: '.html',

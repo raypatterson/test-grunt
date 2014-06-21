@@ -32,15 +32,15 @@ module.exports = {
 
     webpackconfig: {
       watch: ['./src/_entry/*.js'],
-      match: ['./src/*.json'],
-      cwd: './src/',
+      match: ['./src/project/pages/**/*.json'],
+      cwd: './src/project/pages/',
       ext: 'json'
     },
 
     webpackrequire: {
       watch: ['./src/_entry/*.js'],
-      match: ['./src/*.json'],
-      cwd: './src/',
+      match: ['./src/project/pages/**/*.json'],
+      cwd: './src/project/pages/',
       ext: 'json'
     },
 
