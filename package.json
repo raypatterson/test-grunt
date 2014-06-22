@@ -41,7 +41,7 @@
     "grunt-recess": "~0.3.0",
     "grunt-replace": "^0.7.7",
     "grunt-rev": "~0.1.0",
-    "grunt-swig2": "^0.1.3",
+    "grunt-swig2": "https://github.com/RayPatterson/grunt-swig2/tarball/7b3ac7f96af3f990b219768583105eb66d079635",
     "grunt-template": "^0.2.3",
     "grunt-usemin": "~2.0.2",
     "jquery": "^2.1.1",
