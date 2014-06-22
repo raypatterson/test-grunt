@@ -26,9 +26,17 @@ module.exports = {
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
 
     swig: {
-      pages: 'project/pages/',
-      src: __dirname + '/src/project/swig',
-      watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*']
+      watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*'],
+      basepath: __dirname,
+      pages: {
+        cwd: './src/project/pages/',
+        src: ['**/*.swig'],
+        ext: '.html',
+      },
+      partials: {
+        src: __dirname + '/src/project/swig/partials/',
+        filepath: '/partial.html'
+      }
     },
 
     webpackconfig: {

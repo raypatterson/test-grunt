@@ -5,6 +5,7 @@
 
 module.exports = {
   options: {
+    basepath: '<%= app_files.swig.basepath %>',
     autoescape: true,
     cache: false,
     swigOptions: {
@@ -13,7 +14,8 @@ module.exports = {
       locals: {
         rootDir: '<%= root_dir %>',
         getPartialPath: function(input) {
-          return require('grunt').config.get('app_files.swig.src') + '/partials/' + input + '/partial.html';
+          var cfg = require('grunt').config.get('app_files.swig.partials');
+          return cfg.src + input + cfg.filepath;
         }
       }
     },
@@ -27,17 +29,12 @@ module.exports = {
   },
   dev: {
     expand: true,
-    cwd: './src/project/pages/',
-    src: ['**/*.swig'],
-    ext: '.html',
+    cwd: '<%= app_files.swig.pages.cwd %>',
+    src: '<%= app_files.swig.pages.src %>',
+    ext: '<%= app_files.swig.pages.ext %>',
     dest: '<%= build_dir %>',
     rename: function(dest, src) {
-      dest += '/' + src;
-      console.log('src:', src);
-      console.log('dest:', dest);
-      return dest;
-    },
-    generateSitemap: false,
-    generateRobotstxt: false
+      return dest += '/' + src;
+    }
   }
 };

@@ -1,1 +1,1 @@
-{% extends '../../../project/swig/layouts/page.html' %}
+{% extends 'src/project/swig/layouts/page.html' %}
