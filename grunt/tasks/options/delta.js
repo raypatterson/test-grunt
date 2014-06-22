@@ -37,9 +37,10 @@ module.exports = {
    */
   jssrc: {
     files: [
-          '<%= app_files.js %>'
-        ],
-    tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
+      '<%= app_files.js %>'
+    ],
+    tasks: ['jshint:src', 'modernizr']
+    // tasks: ['jshint:src', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['jshint:src', 'karma:unit:run', 'copy:build_appjs']
   },
 
@@ -49,9 +50,10 @@ module.exports = {
    */
   coffeesrc: {
     files: [
-          '<%= app_files.coffee %>'
-        ],
-    tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
+      '<%= app_files.coffee %>'
+    ],
+    tasks: ['coffeelint:src', 'modernizr']
+    // tasks: ['coffeelint:src', 'coffee:source', 'browserifyBower:build:nowrite', 'browserify:build', 'modernizr']
     // tasks: ['coffeelint:src', 'coffee:source', 'karma:unit:run', 'copy:build_appjs']
   },
 
@@ -67,10 +69,10 @@ module.exports = {
   /**
    * When index.html changes, we need to compile it.
    */
-  html: {
-    files: ['<%= app_files.html %>'],
-    tasks: ['index:build']
-  },
+  // html: {
+  //   files: ['<%= app_files.html %>'],
+  //   tasks: ['index:build']
+  // },
 
   /**
    * When Swig files change, we need to compile them.
@@ -81,22 +83,38 @@ module.exports = {
   },
 
   /**
+   * When Entry files change, we need to compile them.
+   */
+  webpackconfig: {
+    files: ['<%= app_files.webpackconfig.watch %>'],
+    tasks: ['webpackconfig:dev', 'webpackrequire:dev']
+  },
+
+  /**
+   * When Webpack files change, we need to compile them.
+   */
+  webpack: {
+    files: ['<%= app_files.webpack.watch %>'],
+    tasks: ['webpack:dev']
+  },
+
+  /**
    * When our templates change, we only rewrite the template cache.
    */
-  tpls: {
-    files: [
-          '<%= app_files.tpl %>'
-        ],
-    tasks: ['html2js']
-  },
+  // tpls: {
+  //   files: [
+  //         '<%= app_files.tpl %>'
+  //       ],
+  //   tasks: ['html2js']
+  // },
 
   /**
    * When the CSS files change, we need to compile and minify them.
    */
-  sass: {
-    files: ['src/**/*.scss'],
-    tasks: ['compass:build', 'autoprefixer', 'modernizr']
-  },
+  // sass: {
+  //   files: ['src/**/*.scss'],
+  //   tasks: ['compass:build', 'autoprefixer', 'modernizr']
+  // },
 
   /**
    * When a JavaScript unit test file changes, we only want to lint it and
@@ -104,8 +122,8 @@ module.exports = {
    */
   jsunit: {
     files: [
-          '<%= app_files.jsunit %>'
-        ],
+      '<%= app_files.jsunit %>'
+    ],
     tasks: ['jshint:test'],
     // tasks: ['jshint:test', 'karma:unit:run'],
     options: {
@@ -119,8 +137,8 @@ module.exports = {
    */
   coffeeunit: {
     files: [
-          '<%= app_files.coffeeunit %>'
-        ],
+      '<%= app_files.coffeeunit %>'
+    ],
     tasks: ['coffeelint:test'],
     // tasks: ['coffeelint:test', 'karma:unit:run'],
     options: {

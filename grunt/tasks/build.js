@@ -6,16 +6,14 @@ module.exports = function(grunt) {
    * The `build` task gets your app ready to run for development and testing.
    */
   grunt.registerTask('build', [
-    'clean', 
-    'swig:dev', 
-    'jshint', 'coffeelint', 'coffee',
-    'browserifyBower:build',
-    'browserify:build',
-    'compass:build', 'concat:build_css', 'autoprefixer',
+    'clean',
+    'swig:dev',
+    'webpackconfig:dev',
+    'webpackrequire:dev',
+    'webpack:dev',
+    'jshint',
     'copy:build_app_assets',
-    'modernizr',
-    'index:build'
-    // , 'karmaconfig', 'karma:continuous'
+    'modernizr'
   ]);
 
 };

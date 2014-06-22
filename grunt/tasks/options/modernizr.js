@@ -4,7 +4,7 @@
  */
 module.exports = {
   dist: {
-    devFile: './modernizr.js',
+    devFile: '<%= bower_dir %>/modernizr/modernizr.js',
     outputFile: '<%= build_dir %>/modernizr.js',
     files: {
       src: [

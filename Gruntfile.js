@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+  global.rekuire = require('rekuire');
+
   /**
    * Load required Grunt tasks. These are installed based on the versions listed
    * in `package.json` when you do `npm install` in this directory.
@@ -45,5 +47,10 @@ module.exports = function(grunt) {
    * The default task is to build and compile.
    */
   grunt.registerTask('default', ['build', 'compile']);
+
+  /**
+   * Load npm tasks
+   */
+  grunt.loadNpmTasks('grunt-webpack');
 
 };

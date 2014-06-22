@@ -11,6 +11,9 @@ module.exports = {
   source_dir: 'src',
   build_dir: '.tmp',
   compile_dir: 'dist',
+  bower_dir: 'bower_components',
+  node_dir: 'node_modules',
+  temp_dir: './src/.tmp/',
 
   /**
    * This is a collection of file patterns that refer to our app code (the
@@ -18,14 +21,54 @@ module.exports = {
    */
   app_files: {
 
-    html: ['src/index.html'],
+    html: ['src/*.html'],
 
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
 
     swig: {
-      src: __dirname + '/src/project/templates/swig',
-      watch: ['src/{,*/}*.{swig,json}', 'src/**/swig/**/*.html', '!src/vendor/{,*/}*.*']
+      watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*'],
+      basepath: __dirname,
+      pages: {
+        cwd: './src/project/pages/',
+        src: ['**/*.swig'],
+        ext: '.html',
+      },
+      partials: {
+        src: __dirname + '/src/project/swig/partials/',
+        filepath: '/partial.html'
+      }
     },
+
+    webpackconfig: {
+      watch: ['./src/_entry/*.js'],
+      match: ['./src/project/pages/**/*.json'],
+      cwd: './src/project/pages/',
+      ext: 'json'
+    },
+
+    webpackrequire: {
+      watch: ['./src/_entry/*.js'],
+      match: ['./src/project/pages/**/*.json'],
+      cwd: './src/project/pages/',
+      ext: 'json'
+    },
+
+    webpack: {
+      context: './',
+      module_dirs: ['../node_modules', '../bower_components', './vendor', './library', './project', './project/swig/partials/'],
+      watch: ['./src/{,*/}*.{js,json,scss}', '!./src/vendor/{,*/}*.*'],
+      match: ['./src/*.js', '!./src/*.spec.js'],
+      cwd: './src/',
+      ext: 'js'
+    },
+
+    // replace: {
+    //   src: ['./src/.tmp/*'],
+    //   dest: './src/.tmp/',
+    //   rename: function(dest, src) {
+    //     return dest + src + '.js';
+    //   }
+    // },
 
     favicons: {
       src: 'src/project/images/favicons/__FAVICON_SOURCE__.png',
@@ -38,7 +81,7 @@ module.exports = {
 
     bower: '.tmp/bower.js',
 
-    js: ['src/{,*/}*.js', '!src/{,*/}*.spec.js'],
+    js: ['src/{,*/}*.js', '!src/{,*/}*.spec.js', '!src/_entry/*.js'],
     jsunit: ['src/**/*.spec.js'],
 
     coffee: ['src/{,*/}*.coffee', '!src/{,*/}*.spec.coffee'],
