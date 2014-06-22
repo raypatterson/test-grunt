@@ -1,4 +1,4 @@
-{% extends 'src/project/swig/layouts/_base.html' %}
+{% extends '_base.html' %}
 
 {% block base %}
 
@@ -11,12 +11,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>{{ title|pageTitle }}</title>
+        <title>{{ get_page_title(title) }}</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <script type="text/javascript" src="/modernizr.js"></script>
-        <script type="text/javascript" src="/commons.js"></script>
-        <script type="text/javascript" src="/{% if path %}{{ path }}/{% endif %}index.js"></script>
+        <script type="text/javascript" src="modernizr.js"></script>
+        <script type="text/javascript" src="commons.js"></script>
+        <script type="text/javascript" src="{% if path %}{{ path }}/{% endif %}scripts.js"></script>
     </head>
     <body class="page {{ classes }}">
         {{ helpers.get_items(items) }}

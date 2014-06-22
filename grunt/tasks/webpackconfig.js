@@ -17,11 +17,11 @@ module.exports = function(grunt) {
 
     fs.removeSync(temp_dir);
 
-    _.map(arr, function( val , key ) {
+    _.map(arr, function(val, key) {
 
-      key = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length, val.lastIndexOf(data.ext) - 1);
-      keys.push(key); 
-      
+      key = val.substring(val.lastIndexOf(data.cwd) + data.cwd.length, val.lastIndexOf(data.ext) - 1).replace('data', 'scripts');
+      keys.push(key);
+
     });
 
     _.each(keys, function(key) {

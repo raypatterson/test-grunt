@@ -26,21 +26,30 @@ module.exports = {
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
 
     swig: {
-      src: __dirname + '/src/project/swig',
-      watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*']
+      watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*'],
+      basepath: __dirname,
+      pages: {
+        cwd: './src/project/pages/',
+        src: ['**/*.swig'],
+        ext: '.html',
+      },
+      partials: {
+        src: __dirname + '/src/project/swig/partials/',
+        filepath: '/partial.html'
+      }
     },
 
     webpackconfig: {
       watch: ['./src/_entry/*.js'],
-      match: ['./src/*.json'],
-      cwd: './src/',
+      match: ['./src/project/pages/**/*.json'],
+      cwd: './src/project/pages/',
       ext: 'json'
     },
 
     webpackrequire: {
       watch: ['./src/_entry/*.js'],
-      match: ['./src/*.json'],
-      cwd: './src/',
+      match: ['./src/project/pages/**/*.json'],
+      cwd: './src/project/pages/',
       ext: 'json'
     },
 
