@@ -1,35 +1,42 @@
 /**
  * Build Swig templates
- * https://github.com/rtgibbons/grunt-swig
+ * https://github.com/gustavohenke/grunt-swig2
  */
 
 module.exports = {
-  dev: {
-    init: {
+  options: {
+    autoescape: true,
+    cache: false,
+    swigOptions: {
       autoescape: true,
       cache: false,
       locals: {
-        get_page_title: function (append) { 
-          // var title = globals.page_title;
-          var title = 'Page Title';
-          if (append !== undefined) {
-            return title + ' | ' + append;
-          } else {
-            return title;
-          }
-        },
-        get_partial_path: function(path) {
-          var src = require('grunt').config.get('app_files').swig.src;
-          return src + '/partials/' + path + '/partial.html'
+        rootDir: '<%= root_dir %>',
+        getPartialPath: function(input) {
+          return require('grunt').config.get('app_files.swig.src') + '/partials/' + input + '/partial.html';
         }
       }
     },
-    loader: 'foo',
+    data: {},
+    filters: {
+      pageTitle: function(input) {
+        var title = 'Page Title';
+        return input !== undefined ? title + ' | ' + input : title;
+      }
+    }
+  },
+  dev: {
     expand: true,
-    dot: true,
-    cwd: '<%= source_dir %>',
-    src: ['**/*.swig', '!**/vendor/**/*'],
+    cwd: './src/project/pages/',
+    src: ['**/*.swig'],
+    ext: '.html',
     dest: '<%= build_dir %>',
+    rename: function(dest, src) {
+      dest += '/' + src;
+      console.log('src:', src);
+      console.log('dest:', dest);
+      return dest;
+    },
     generateSitemap: false,
     generateRobotstxt: false
   }

@@ -26,6 +26,7 @@ module.exports = {
     assets_src: ['./{,*/}fonts/{,*/}*', './{,*/}images/{,*/}*'],
 
     swig: {
+      pages: 'project/pages/',
       src: __dirname + '/src/project/swig',
       watch: ['./src/{,*/}*.{swig,json}', './src/**/swig/**/*.html', '!./src/vendor/{,*/}*.*']
     },

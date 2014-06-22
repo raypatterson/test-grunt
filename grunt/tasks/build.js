@@ -7,7 +7,7 @@ module.exports = function(grunt) {
    */
   grunt.registerTask('build', [
     'clean',
-    'assemble:dev',
+    'swig:dev',
     'webpackconfig:dev',
     'webpackrequire:dev',
     'webpack:dev',

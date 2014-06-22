@@ -51,7 +51,6 @@ module.exports = function(grunt) {
   /**
    * Load npm tasks
    */
-  grunt.loadNpmTasks('assemble');
   grunt.loadNpmTasks('grunt-webpack');
 
 };

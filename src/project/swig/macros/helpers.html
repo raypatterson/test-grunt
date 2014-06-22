@@ -1,9 +1,9 @@
-{% macro get_item(partial, item) %}
-  {% set file = get_partial_path(partial) %}
+{% macro get_item(slug, item) %}
+  {% set partialpath = getPartialPath(slug) %}
   {% if item != undefined %}
-    {% include file with item only %}
+    {% include partialpath with item only %}
   {% else %}
-    {% include file %}
+    {% include partialpath %}
   {% endif %}
 {% endmacro %}
 

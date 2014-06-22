@@ -1,5 +1,1 @@
----
-foo: 'bar'
----
-
-{% extends './src/project/assemble/layouts/page.html' %}
+{% extends '../../project/swig/layouts/page.html' %}
